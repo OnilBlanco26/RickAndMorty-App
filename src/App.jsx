@@ -57,8 +57,8 @@ function App() {
           <img  alt="" />
         </div>
       <form className='headerForm' onSubmit={handleSubmit} action="">
-        <input id='inputSearch' type="text" placeholder='Search for a location' />
-        <button>Search</button>
+        <input id='inputSearch' type="text" placeholder='Search for a location...' />
+        <button className='btn__search'><span><i class='bx bx-search'></i></span></button>
       </form>
       { hasError ?
       
