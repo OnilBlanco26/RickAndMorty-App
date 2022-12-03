@@ -133,7 +133,9 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin: 0 2rem;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1480px;
 }
 
 .card {
@@ -169,13 +171,20 @@ body {
   border-bottom-right-radius: 5px;
 }
 
-.circle div {
+.circle  {
   width: 16px;
   height: 16px;
+  border-radius: 50%;
+  background-color: gray;
 }
 
-.circle {
-  border-radius: 50%;
+
+.Alive {
+  background-color: green;
+}
+
+.Dead {
+  background-color: red;
 }
 
 .card__section{
@@ -189,6 +198,7 @@ body {
   color: #fff;
   margin-left: .5rem;
   margin-top: .5rem;
+  text-align: center;
 }
 
 .card__section-list {
@@ -201,14 +211,16 @@ body {
 .card__section-list--span1 {
   display: block;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 16px;
   color: #7E7E7E;
+  text-transform: uppercase;
 }
 
 .card__section-list--span2 {
   font-weight: 700;
   font-size: 18px;
   color: rgb(0, 255, 0);
+
 }
 
 .errorFetch {
