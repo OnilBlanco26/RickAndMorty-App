@@ -58,7 +58,7 @@ function App() {
         </div>
       <form className='headerForm' onSubmit={handleSubmit} action="">
         <input id='inputSearch' type="text" placeholder='Search for a location...' />
-        <button className='btn__search'><span><i class='bx bx-search'></i></span></button>
+        <button className={hasError ? `btn__search btn__change` : `btn__search`}><span><i class='bx bx-search'></i></span></button>
       </form>
       { hasError ?
       

@@ -156,6 +156,13 @@ body {
   transition-delay: 0s,0.5s,.5s,.5s;
 }
 
+.btn__change {
+  filter: hue-rotate(240deg);
+  color: #0f0;
+  background-color: #0b3a15;
+}
+
+
 .locationInfo {
   position: relative;
   display: grid;
