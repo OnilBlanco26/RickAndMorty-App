@@ -74,7 +74,8 @@ function App() {
           location?.residents.map(url => (
             <ResidentCard 
             key={url}
-            url = {url} />
+            url = {url} 
+            />
           ))
         }
       </div>

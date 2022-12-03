@@ -27,9 +27,9 @@ const ResidentCard = ({url}) => {
             <h3 className='card__section-name'>{resident?.name}</h3>
             <div className='card__line'></div>
             <ul className='card__section-list'>
-                <li className='card__section-list--item'><span className='card__section-list--span1'>Species</span><span className='card__section-list--span2'>{resident?.species}</span></li>
-                <li className='card__section-list--item'><span className='card__section-list--span1'>Origin</span><span className='card__section-list--span2'>{resident?.origin.name}</span></li>
-                <li className='card__section-list--item'><span className='card__section-list--span1'>Episodes where appear</span><span className='card__section-list--span2'>{resident?.episode.length}</span></li>
+                <li className='card__section-list--item'><span className='card__section-list--span1'>Species</span><span className={resident?.status === 'Alive' || resident?.status === 'unknown' ? `card__section-list--span2 list__Alive` : `card__section-list--span2 list__Dead`}>{resident?.species}</span></li>
+                <li className='card__section-list--item'><span className='card__section-list--span1'>Origin</span><span className={resident?.status === 'Alive' || resident?.status === 'unknown' ? `card__section-list--span2 list__Alive` : `card__section-list--span2 list__Dead`}>{resident?.origin.name}</span></li>
+                <li className='card__section-list--item'><span className='card__section-list--span1'>Episodes where appear</span><span className={resident?.status === 'Alive' || resident?.status === 'unknown' ? `card__section-list--span2 list__Alive` : `card__section-list--span2 list__Dead`}>{resident?.episode.length}</span></li>
             </ul>
         </section>
     </article>
