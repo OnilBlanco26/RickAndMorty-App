@@ -5,6 +5,7 @@ import ErrorFetch from './components/ErrorFetch'
 import LocationInfo from './components/LocationInfo'
 import ResidentCard from './components/ResidentCard'
 import Particle from './components/Particle'
+import imgBack1 from '../src/assets/img/img1.png'
 
 function App() {
 
@@ -51,10 +52,9 @@ function App() {
   return (
     <div className="App">
       <Particle />
-      <div className='headerImg'>
-        <img className='headerImg__img' alt="" />
+      <img src={imgBack1} className='headerImg' />
        
-      </div>
+   
       <div className="imgName">
           <img  alt="" />
         </div>
@@ -83,7 +83,7 @@ function App() {
       </div>
       </>
       }
-    </div>
+      </div>
     
   )
 }

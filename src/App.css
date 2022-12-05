@@ -17,15 +17,14 @@ body {
 }
 
 .headerImg {
-  width: 100%;
-  min-width: 645px;
-  height: 500px;
   position: relative;
-  background-image: url('./assets/img/img1.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  object-fit: contain;
+  top: 0%;
+  width: 100%;
+  height: 350px;
+  background-size: center center;
+  object-fit: center center;
   margin: 0 auto;
+  opacity: 0.8;
 }
 
 
@@ -45,7 +44,7 @@ body {
   display: flex;
   position: relative;
   justify-content: center;
-  margin-top: 1.8em;
+  margin-top: -2em;
   margin-bottom: 4em;
 }
 
@@ -373,6 +372,7 @@ body {
     left: 3%;
     top: -20%;
     margin: 0 auto;
+    z-index: 10;
 }
 
 .rickImgAlive {
