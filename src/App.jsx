@@ -4,6 +4,7 @@ import './App.css'
 import ErrorFetch from './components/ErrorFetch'
 import LocationInfo from './components/LocationInfo'
 import ResidentCard from './components/ResidentCard'
+import Particle from './components/Particle'
 
 function App() {
 
@@ -49,6 +50,7 @@ function App() {
 
   return (
     <div className="App">
+      <Particle />
       <div className='headerImg'>
         <img className='headerImg__img' alt="" />
        
