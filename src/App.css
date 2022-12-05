@@ -174,8 +174,9 @@ body {
   width: 80%;
   margin: 0 auto;
   padding: .5rem .5rem;
-  box-shadow: 2px 3px 10px black;
+  box-shadow: 2px 3px 10px #0f0;
   border-radius: 2px;
+  opacity: 0.8;
 }
 
 .locationInfo__name {
@@ -210,7 +211,7 @@ body {
 
 .residents-container {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
