@@ -42,7 +42,7 @@ const ResidentCard = ({url}) => {
   
 
   return (
-    <article className='card'>
+    <article className={resident?.status === 'Alive' || resident?.status === 'unknown' ? `card cardBG` : `card cardBR`}>
         
         <header className='card__header'>
             <div className='rickImg__card'>
