@@ -371,14 +371,40 @@ body {
     height: 80px;
     object-fit: cover;
     left: 3%;
-    top: -20%;
+    top: -25%;
     margin: 0 auto;
     z-index: 10;
+    opacity: 0;
+    transition-delay: .5s;
+    transition: opacity .5s ease;
 }
 
 .rickImgAlive {
   width: 150px;
   height: 150px;
   left: -13%;
-  top: -31%;
+  top: -35%;
+}
+.card:hover .rickImg {
+  opacity: 1;
+  animation-delay: 1;
+  animation: 3s trans infinite;
+}
+
+@keyframes trans {
+  50%{
+    transform: translateX(225%);
+  }
+}
+
+.card:hover .rickImgAlive {
+  opacity: 1;
+  animation-delay: 1;
+  animation: 3s trans2 infinite;
+}
+
+@keyframes trans2 {
+  50%{
+    transform: translateX(120%);
+  }
 }
