@@ -238,6 +238,10 @@ body {
   transition:  box-shadow .5s ease;
   backface-visibility: visible;
 }
+.cardBW {
+  transition:  box-shadow .5s ease;
+  backface-visibility: visible;
+}
 
 .cardBR:hover {
   box-shadow: 1px 2px 20px red;
@@ -247,6 +251,10 @@ body {
 
 .cardBG:hover {
   box-shadow: 1px 2px 20px #0f0;
+  animation: 1s rebound 1
+}
+.cardBW:hover {
+  box-shadow: 1px 2px 20px #fff;
   animation: 1s rebound 1
 }
 
@@ -354,6 +362,10 @@ body {
 
 .list__Dead {
   color: red;
+}
+
+.list__Unknown {
+  color: #fff;
 }
 
 .errorFetch {

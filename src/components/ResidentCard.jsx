@@ -39,10 +39,34 @@ const ResidentCard = ({url}) => {
         }
         return text;
     }
+
+    const cardColor = () => {
+        let text = '';
+        if(resident?.status === 'Alive') {
+            text = `card__section-list--span2 list__Alive`
+        } else if(resident?.status === 'Dead') {
+            text = `card__section-list--span2 list__Dead`
+        } else {
+            text = `card__section-list--span2 list__Unknown`
+        }
+        return text
+    }
+
+    const BgColor = () => {
+        let text = '';
+        if(resident?.status === 'Alive') {
+            text = `card cardBG`
+        } else if(resident?.status === 'Dead') {
+            text = `card cardBR`
+        } else {
+            text = `card cardBW`
+        }
+        return text
+    }
   
 
   return (
-    <article className={resident?.status === 'Alive' || resident?.status === 'unknown' ? `card cardBG` : `card cardBR`}>
+    <article className={BgColor()}>
         
         <header className='card__header'>
             <div className='rickImg__card'>
@@ -59,9 +83,9 @@ const ResidentCard = ({url}) => {
             <h3 className='card__section-name'>{resident?.name}</h3>
             <div className={`card__line ${resident?.status}`}></div>
             <ul className='card__section-list'>
-                <li className='card__section-list--item'><span className='card__section-list--span1'>Species</span><span className={resident?.status === 'Alive' || resident?.status === 'unknown' ? `card__section-list--span2 list__Alive` : `card__section-list--span2 list__Dead`}>{resident?.species}</span></li>
-                <li className='card__section-list--item'><span className='card__section-list--span1'>Origin</span><span className={resident?.status === 'Alive' || resident?.status === 'unknown' ? `card__section-list--span2 list__Alive` : `card__section-list--span2 list__Dead`}>{resident?.origin.name}</span></li>
-                <li className='card__section-list--item'><span className='card__section-list--span1'>Episodes where appear</span><span className={resident?.status === 'Alive' || resident?.status === 'unknown' ? `card__section-list--span2 list__Alive` : `card__section-list--span2 list__Dead`}>{resident?.episode.length}</span></li>
+                <li className='card__section-list--item'><span className='card__section-list--span1'>Species</span><span className={cardColor()}>{resident?.species}</span></li>
+                <li className='card__section-list--item'><span className='card__section-list--span1'>Origin</span><span className={cardColor()}>{resident?.origin.name}</span></li>
+                <li className='card__section-list--item'><span className='card__section-list--span1'>Episodes where appear</span><span className={cardColor()}>{resident?.episode.length}</span></li>
             </ul>
         </section>
     </article>
