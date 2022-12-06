@@ -536,6 +536,17 @@ body {
     object-fit: cover;
     background-repeat: no-repeat;
     left: 40%;
-    top: 20%;
+    top: 10%;
+  }
+
+  .headerImg {
+    position: relative;
+    top: 0%;
+    width: 100%;
+    height: 220px;
+    background-size: center center;
+    object-fit: center center;
+    margin: 0 auto;
+    opacity: 0.8;
   }
 }
