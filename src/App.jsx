@@ -6,6 +6,7 @@ import LocationInfo from './components/LocationInfo'
 import ResidentCard from './components/ResidentCard'
 import Particle from './components/Particle'
 import imgBack1 from '../src/assets/img/img1.png'
+import FilteredLocations from './components/FilteredLocations'
 
 function App() {
 
@@ -43,26 +44,31 @@ function App() {
 
 
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setLocationInput(e.target.inputSearch.value)
-  }
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   setLocationInput(e.target.inputSearch.value)
+  // }
   
 
   return (
     <div className="App">
       <Particle />
+      
       <img src={imgBack1} className='headerImg' />
        
    
       <div className="imgName">
           <img  alt="" />
         </div>
-      <form className='headerForm' onSubmit={handleSubmit} action="">
-        <input id='inputSearch' type="text" placeholder='Search for a location...' />
-        <button className={hasError ? `btn__search btn__change` : `btn__search`}><span><i class='bx bx-search'></i></span></button>
+      { <form className='headerForm' action="">
+        <FilteredLocations
+          hasError = {hasError}
+         setLocationInput = {setLocationInput}/>
+        
       </form>
+} 
       { hasError ?
+      
       
       <ErrorFetch /> 
       
