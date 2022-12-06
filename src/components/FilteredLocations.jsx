@@ -18,14 +18,14 @@ const filtrarLocations=(value)=>{
   const inputValue=value.trim().toLowerCase();
 const inputLength=inputValue.length;
 
-  var filtrado=data.filter((personaje)=>{
-    var textoCompleto=personaje.name;
+  var filtrado=data.filter((locat)=>{
+    var textoCompleto=locat.name;
 
     if(textoCompleto.toLowerCase()
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
     .includes(inputValue)){
-      return personaje;
+      return locat;
     }
   });
 
@@ -50,6 +50,7 @@ const renderSuggestion=(suggestion)=>(
       <li className='suge__list-item'><span>Residents: </span> <span>{`${suggestion.residents.length}`}</span></li>
     </ul>
   </div>
+
 );
 
 const selectLocations=(id)=>{
