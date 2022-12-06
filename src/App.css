@@ -458,3 +458,29 @@ body {
 .react-autosuggest__suggestion--highlighted {
   background-color: #0f0;
 }
+
+
+.suge__list {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  align-items: center;
+}
+
+.suge__list-item:nth-child(2) {
+
+  width: 500px;
+}
+.suge__list-item:nth-child(1) {
+  width: 100px
+}
+.suge__list-item:nth-child(3) {
+  width: 200px
+}
+
+.suge__list-item span:nth-child(1) {
+  color: rgb(138, 135, 135);
+}
+.suge__list-item span:nth-child(2) {
+  color: #fff;
+}

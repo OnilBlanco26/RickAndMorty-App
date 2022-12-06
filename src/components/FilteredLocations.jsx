@@ -41,17 +41,25 @@ const getSuggestionValue=(suggestion)=>{
 }
 
 const renderSuggestion=(suggestion)=>(
-  <div className='sugerencia' onClick={()=>selectLocations(suggestion)}>
-    {`${suggestion.name}`}
+  
+  <div className='sugerencia' onClick={()=>selectLocations(suggestion.id)}>
+    
+    <ul className='suge__list'>
+      <li className='suge__list-item'><span>id:</span> <span>{`${suggestion.id}`}</span></li>
+      <li className='suge__list-item'>{`${suggestion.name}`}</li>
+      <li className='suge__list-item'><span>Residents: </span> <span>{`${suggestion.residents.length}`}</span></li>
+    </ul>
   </div>
 );
 
 const selectLocations=(id)=>{
     setLocationInput(id);
+    
   }
 
 const onChange=(e, {newValue})=>{
   setValue(newValue);
+
 }
 
 const inputProps={
@@ -62,15 +70,18 @@ onChange
 };
 
 const eventEnter=(e)=>{
-if(e.key == "Enter"){
-  var locat = data.filter(p => p.name == e.target.value.trim());
 
+  let locat = data.filter(p => p.name == e.target.value.trim());
+  let locatA
+  if(e.key == 'Enter') {
+    
   
-  let locatA = locat[0].id;
-  setLocationInput(locatA)
-  selectLocations(locatA)
-
-}
+    locatA = locat[0].id; 
+    console.log(`seC: ${locatA}`)
+    setLocationInput(locatA)
+  } 
+  // selectLocations(locatA)
+  setValue('');
 }
 
 // const handleClick = (e) => {
@@ -106,6 +117,7 @@ const obtenerData=()=>{
       renderSuggestion={renderSuggestion}
       inputProps={inputProps}
       onSuggestionSelected={eventEnter}
+     
      />
      {/* <button onClick={handleClick} className={hasError ? `btn__search btn__change` : `btn__search`}><span><i className='bx bx-search'></i></span></button> */}
      </>

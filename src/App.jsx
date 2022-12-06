@@ -42,6 +42,8 @@ function App() {
     })
   }, [locationInput])  
 
+    console.log(locationInput)
+
 
 
   // const handleSubmit = (e) => {
