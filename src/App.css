@@ -527,4 +527,15 @@ body {
     margin-right: auto;
     text-align: center;
   }
+  .imgName {
+    background-image: url('./assets/img/img2.png');
+    position: absolute;
+    width: 50%;
+    height: 372px;
+    background-size: contain;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    left: 40%;
+    top: 20%;
+  }
 }
