@@ -41,6 +41,7 @@ const getSuggestionValue=(suggestion)=>{
 }
 
 const renderSuggestion=(suggestion)=>(
+  <>
   
   <div className='sugerencia' onClick={()=>selectLocations(suggestion.id)}>
     
@@ -50,12 +51,16 @@ const renderSuggestion=(suggestion)=>(
       <li className='suge__list-item'><span>Residents: </span> <span>{`${suggestion.residents.length}`}</span></li>
     </ul>
   </div>
+  {}
+  </>
 
 );
 
+
+
 const selectLocations=(id)=>{
     setLocationInput(id);
-    
+    onSuggestionsClearRequested()
   }
 
 const onChange=(e, {newValue})=>{

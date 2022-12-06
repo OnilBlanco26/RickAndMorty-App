@@ -42,7 +42,7 @@ function App() {
     })
   }, [locationInput])  
 
-    console.log(locationInput)
+   
 
 
 
