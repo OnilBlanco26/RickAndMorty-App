@@ -34,6 +34,7 @@ const inputLength=inputValue.length;
 
 const onSuggestionsClearRequested = () =>{
   setLocations([]);
+  setValue('');
 }
 
 const getSuggestionValue=(suggestion)=>{
@@ -87,7 +88,6 @@ const eventEnter=(e)=>{
     setLocationInput(locatA)
   } 
   // selectLocations(locatA)
-  setValue('');
 }
 
 // const handleClick = (e) => {

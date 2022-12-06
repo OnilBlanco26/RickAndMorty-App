@@ -493,10 +493,11 @@ body {
 /* Medias Querys */
 
 
-@media (min-width: 300px) and (max-width: 650px) {
+@media (min-width: 300px) and (max-width: 720px) {
   .inputSug {
     font-size: 2rem;
     width: 80%;
+    height: auto;
     background: rgba(250, 248, 248, 0.489);
     border: 4px double white;
     border-top-left-radius: 4px;
