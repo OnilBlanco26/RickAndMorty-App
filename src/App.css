@@ -49,15 +49,7 @@ body {
   margin-bottom: 4em;
 }
 
-.headerForm input {
-  font-size: 3rem;
-  background: rgba(250, 248, 248, 0.489);
-  border: 4px double white;
-  margin-right: .5rem;
-  color: #0f0;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-}
+
 
 .headerForm input::placeholder {
   color: #fff;
@@ -495,4 +487,20 @@ body {
 }
 .suge__list-item span:nth-child(2) {
   color: #fff;
+}
+
+
+/* Medias Querys */
+
+
+@media (min-width: 300px) and (max-width: 500px) {
+  .inputSug {
+    font-size: 2rem;
+    width: 80%;
+    background: rgba(250, 248, 248, 0.489);
+    border: 4px double white;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    
+  }
 }
